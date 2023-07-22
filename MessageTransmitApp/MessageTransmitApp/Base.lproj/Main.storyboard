@@ -36,23 +36,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kG-mH-kPt">
+                                <rect key="frame" x="8" y="170" width="398" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Segue"/>
+                                <connections>
+                                    <action selector="Segue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SdS-wU-ASK"/>
+                                    <segue destination="Ij7-qe-k2c" kind="presentation" identifier="detailSegue" modalPresentationStyle="fullScreen" id="QPa-Ii-6Sv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ki-dR-OVn" secondAttribute="trailing" constant="8" id="0yu-ZX-icZ"/>
                             <constraint firstItem="9ki-dR-OVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="6eW-5g-HQ4"/>
+                            <constraint firstItem="5kG-mH-kPt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="92L-mv-1Qq"/>
                             <constraint firstItem="9ki-dR-OVn" firstAttribute="top" secondItem="sQK-iN-A00" secondAttribute="bottom" constant="8" id="E7r-bi-cqH"/>
                             <constraint firstItem="sQK-iN-A00" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="FHl-Wq-vSe"/>
                             <constraint firstItem="7i4-Dv-sKG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="IBW-dT-z1n"/>
                             <constraint firstItem="7i4-Dv-sKG" firstAttribute="top" secondItem="9ki-dR-OVn" secondAttribute="bottom" constant="8" id="aKZ-Z4-pid"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7i4-Dv-sKG" secondAttribute="trailing" constant="8" id="gT6-lQ-gq8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5kG-mH-kPt" secondAttribute="trailing" constant="8" id="k5W-gx-UMS"/>
+                            <constraint firstItem="5kG-mH-kPt" firstAttribute="top" secondItem="7i4-Dv-sKG" secondAttribute="bottom" constant="8" id="s9R-Xt-1DO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sQK-iN-A00" secondAttribute="trailing" constant="16" id="sZg-jl-5Kl"/>
                             <constraint firstItem="sQK-iN-A00" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xtq-Pb-3Dx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="sQK-iN-A00" id="U1j-9l-i42"/>
+                        <outlet property="segueButton" destination="5kG-mH-kPt" id="3Jf-Bm-1Wn"/>
                         <outlet property="textField" destination="7i4-Dv-sKG" id="UD0-om-qIw"/>
                     </connections>
                 </viewController>
@@ -74,8 +87,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHT-zh-hcT">
-                                <rect key="frame" x="174" y="163" width="67" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHT-zh-hcT">
+                                <rect key="frame" x="174" y="163" width="66" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="8kn-Bv-ezW"/>
                                 </constraints>
@@ -85,6 +98,12 @@
                                     <action selector="saveButtonClicked:" destination="Ij7-qe-k2c" eventType="touchUpInside" id="dxi-kQ-CXY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-k1-cWa">
+                                <rect key="frame" x="8" y="202" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0EC-th-GB3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,11 +112,15 @@
                             <constraint firstItem="0EC-th-GB3" firstAttribute="trailing" secondItem="LKK-GO-nR6" secondAttribute="trailing" constant="16" id="Fnv-sO-6fZ"/>
                             <constraint firstItem="aHT-zh-hcT" firstAttribute="leading" secondItem="0EC-th-GB3" secondAttribute="leading" constant="174" id="Zna-hn-Zd4"/>
                             <constraint firstItem="aHT-zh-hcT" firstAttribute="top" secondItem="LKK-GO-nR6" secondAttribute="bottom" constant="69" id="h41-nk-CjD"/>
+                            <constraint firstItem="iPd-k1-cWa" firstAttribute="leading" secondItem="0EC-th-GB3" secondAttribute="leading" constant="8" id="jdy-OG-v8V"/>
+                            <constraint firstItem="0EC-th-GB3" firstAttribute="trailing" secondItem="iPd-k1-cWa" secondAttribute="trailing" constant="8" id="jys-5I-1LP"/>
                             <constraint firstItem="LKK-GO-nR6" firstAttribute="leading" secondItem="0EC-th-GB3" secondAttribute="leading" constant="16" id="kXk-3Z-Y4p"/>
+                            <constraint firstItem="iPd-k1-cWa" firstAttribute="top" secondItem="aHT-zh-hcT" secondAttribute="bottom" constant="8" id="nNG-Wt-X1H"/>
                             <constraint firstItem="aHT-zh-hcT" firstAttribute="centerX" secondItem="LKK-GO-nR6" secondAttribute="centerX" id="quj-wu-EVF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="detaildLabel" destination="iPd-k1-cWa" id="diR-LH-V2B"/>
                         <outlet property="saveButton" destination="aHT-zh-hcT" id="hRz-aM-fH4"/>
                         <outlet property="textField" destination="LKK-GO-nR6" id="rvx-fD-RLZ"/>
                     </connections>

@@ -9,12 +9,16 @@ import UIKit
 
 class ViewController2: UIViewController {
     @IBOutlet weak var textField: UITextField!
-    
+    var dataTransmissin: String = ""
+    @IBOutlet weak var detaildLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        detaildLabel.text = dataTransmissin
+        
     }
     
 

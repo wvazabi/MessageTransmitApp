@@ -11,12 +11,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var segueButton: UIButton!
     var hi: String = "Hello World"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("ctrl+Future")
         print("Lets Goo!")
+        
       
         
     }
@@ -30,9 +32,22 @@ class ViewController: UIViewController {
     
     
     @IBAction func save1ButtonClicked(_ sender: Any) {
-        goToSecondVC(self)
+        //goToSecondVC(self)
+        label.text = textField.text
     }
     
-
+    @IBAction func Segue(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailSegue" {
+            if let detailVC = segue.destination as? ViewController2 { // 1
+                detailVC.dataTransmissin =  label.text ?? "" // 2
+            }
+        }
+        
+     }
+    
 }
 
