@@ -7,15 +7,17 @@
 
 import UIKit
 
+
 class ViewController2: UIViewController {
+    
     @IBOutlet weak var textField: UITextField!
     var dataTransmissin: String = ""
     @IBOutlet weak var detaildLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
+    var emergencyDelegate: DataTransferable?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         detaildLabel.text = dataTransmissin
         
@@ -23,7 +25,18 @@ class ViewController2: UIViewController {
     
 
     @IBAction func saveButtonClicked(_ sender: Any) {
+        
     }
+    
+    
+    
+    @IBAction func emergencyButtonClicked(_ sender: UIButton) {
+        dismiss(animated: true) {
+            self.emergencyDelegate?.onEmergencyStatus(phoneNumber: sender.titleLabel!.text!)
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -34,4 +47,5 @@ class ViewController2: UIViewController {
     }
     */
 
+    
 }

@@ -16,6 +16,8 @@
 		1A69F6F32A6C9381007DDE02 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A69F6F22A6C9381007DDE02 /* ViewController2.swift */; };
 		1A69F6F62A6C951E007DDE02 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A69F6F42A6C951E007DDE02 /* ViewController3.swift */; };
 		1A69F6F72A6C951E007DDE02 /* ViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A69F6F52A6C951E007DDE02 /* ViewController3.xib */; };
+		1A69F6F92A6D3C5F007DDE02 /* ViewControllerDel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A69F6F82A6D3C5F007DDE02 /* ViewControllerDel1.swift */; };
+		1A69F6FB2A6D3C7D007DDE02 /* ViewControllerDel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A69F6FA2A6D3C7D007DDE02 /* ViewControllerDel2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		1A69F6F22A6C9381007DDE02 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		1A69F6F42A6C951E007DDE02 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		1A69F6F52A6C951E007DDE02 /* ViewController3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController3.xib; sourceTree = "<group>"; };
+		1A69F6F82A6D3C5F007DDE02 /* ViewControllerDel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDel1.swift; sourceTree = "<group>"; };
+		1A69F6FA2A6D3C7D007DDE02 /* ViewControllerDel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDel2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				1A69F6E02A69C5A9007DDE02 /* SceneDelegate.swift */,
 				1A69F6F42A6C951E007DDE02 /* ViewController3.swift */,
 				1A69F6F52A6C951E007DDE02 /* ViewController3.xib */,
+				1A69F6FA2A6D3C7D007DDE02 /* ViewControllerDel2.swift */,
+				1A69F6F82A6D3C5F007DDE02 /* ViewControllerDel1.swift */,
 				1A69F6E22A69C5A9007DDE02 /* ViewController.swift */,
 				1A69F6F22A6C9381007DDE02 /* ViewController2.swift */,
 				1A69F6E42A69C5A9007DDE02 /* Main.storyboard */,
@@ -148,10 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A69F6FB2A6D3C7D007DDE02 /* ViewControllerDel2.swift in Sources */,
 				1A69F6F62A6C951E007DDE02 /* ViewController3.swift in Sources */,
 				1A69F6E32A69C5A9007DDE02 /* ViewController.swift in Sources */,
 				1A69F6F32A6C9381007DDE02 /* ViewController2.swift in Sources */,
 				1A69F6DF2A69C5A9007DDE02 /* AppDelegate.swift in Sources */,
+				1A69F6F92A6D3C5F007DDE02 /* ViewControllerDel1.swift in Sources */,
 				1A69F6E12A69C5A9007DDE02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

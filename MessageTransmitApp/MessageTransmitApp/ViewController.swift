@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol DataTransferable {
+    func onEmergencyStatus(phoneNumber: String)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
@@ -47,7 +51,18 @@ class ViewController: UIViewController {
             }
         }
         
+        if segue.identifier == "delagationIdentifier" {
+                    if let detailVC = segue.destination as? ViewController2 {
+                        detailVC.emergencyDelegate = self // 1
+                    }
+                }
+        
      }
     
 }
 
+extension ViewController: DataTransferable {
+    func onEmergencyStatus(phoneNumber: String) {
+        print("Acil bir durumda \(phoneNumber) arayın.")
+    }
+}
