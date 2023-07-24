@@ -48,6 +48,7 @@ class ViewControllerDel1: UIViewController {
 extension ViewControllerDel1: DataTransfer{
     func printDataLabel(data: String) {
         labelDel1.text = data
+        print("test")
     }
     
     
